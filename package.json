@@ -1,6 +1,6 @@
 {
-    "homepage": "https://dinhtran0402.github.io/workmanagerment",
-    "name": "workmanagerment",
+    "homepage": "https://dinhtran0402.github.io/workmanagement",
+    "name": "workmanagement",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
