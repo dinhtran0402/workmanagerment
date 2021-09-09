@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/workmanagement/static/css/main.8570dc56.chunk.css",
+    "main.js": "/workmanagement/static/js/main.bb50ba48.chunk.js",
+    "main.js.map": "/workmanagement/static/js/main.bb50ba48.chunk.js.map",
+    "runtime-main.js": "/workmanagement/static/js/runtime-main.2007991c.js",
+    "runtime-main.js.map": "/workmanagement/static/js/runtime-main.2007991c.js.map",
+    "static/js/2.9871303d.chunk.js": "/workmanagement/static/js/2.9871303d.chunk.js",
+    "static/js/2.9871303d.chunk.js.map": "/workmanagement/static/js/2.9871303d.chunk.js.map",
+    "static/js/3.ddb9b610.chunk.js": "/workmanagement/static/js/3.ddb9b610.chunk.js",
+    "static/js/3.ddb9b610.chunk.js.map": "/workmanagement/static/js/3.ddb9b610.chunk.js.map",
+    "index.html": "/workmanagement/index.html",
+    "static/css/main.8570dc56.chunk.css.map": "/workmanagement/static/css/main.8570dc56.chunk.css.map",
+    "static/js/2.9871303d.chunk.js.LICENSE.txt": "/workmanagement/static/js/2.9871303d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2007991c.js",
+    "static/js/2.9871303d.chunk.js",
+    "static/css/main.8570dc56.chunk.css",
+    "static/js/main.bb50ba48.chunk.js"
+  ]
+}
