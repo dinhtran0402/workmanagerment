@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Edit from "../modelCreate/edit";
 import Add from "../modelCreate/index";
-import Covid from "../Covid/Covid";
+// import Covid from "../Covid/Covid";
 import List from "../card/index";
 import Home from "../home/index";
 import Login from "../Auth/login";
@@ -25,7 +25,7 @@ const routeURL = () => {
           component={Home}
         ></PrivateRoute>
         <Route path="/Add" component={Add}></Route>
-        <Route path="/Covid" component={Covid}></Route>
+        {/* <Route path="/Covid" component={Covid}></Route> */}
         <PrivateRoute path="/List" component={List}></PrivateRoute>
 
         <PrivateRoute path="/Profile" component={Profile}></PrivateRoute>
