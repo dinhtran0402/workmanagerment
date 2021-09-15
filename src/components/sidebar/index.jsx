@@ -1,4 +1,4 @@
-import { Box, IconButton, MenuItem, Toolbar } from "@material-ui/core";
+import { Box, IconButton, Toolbar } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Divider from "@material-ui/core/Divider";
@@ -8,24 +8,20 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import {
-  alpha,
-  makeStyles,
-  useTheme,
-  withStyles,
-} from "@material-ui/core/styles";
+import { alpha, makeStyles, useTheme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import AssignmentIcon from "@material-ui/icons/Assignment";
 import HomeIcon from "@material-ui/icons/Home";
 import MenuIcon from "@material-ui/icons/Menu";
+import WarningIcon from "@material-ui/icons/Warning";
 import PropTypes from "prop-types";
 import React, { useEffect } from "react";
 import { useHistory } from "react-router";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../../Contexts/AuthContext";
-import DarkMode from "../Toogle/DarkMode";
 import LoginButton from "../Auth/LoginButton";
 import LogoutButton from "../Auth/LogoutButton";
+import Toggle from "../Toggle/DarkMode";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -129,16 +125,7 @@ function ResponsiveDrawer(props) {
       </>
     );
   };
-  const StyledMenuItem = withStyles((theme) => ({
-    root: {
-      "&:focus": {
-        backgroundColor: theme.palette.primary.main,
-        "& .MuiListItemIcon-root, & .MuiListItemText-primary": {
-          color: theme.palette.common.white,
-        },
-      },
-    },
-  }))(MenuItem);
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -169,38 +156,57 @@ function ResponsiveDrawer(props) {
       </div>
       <Divider />
       <List>
-        <NavLink
+        <ListItem
+          button
+          component={NavLink}
           exact
           activeStyle={{
             fontWeight: "bold",
-            color: "#4682B4",
+            color: "white",
+            background: "#00BFFF",
           }}
           className="linkMenu"
-          to="/"
+          to="/workmanagerment"
         >
-          <StyledMenuItem>
-            <ListItemIcon>
-              <HomeIcon style={{ color: "#00CED1" }} fontSize="medium" />
-            </ListItemIcon>
-            <ListItemText fontWeight="bold" primary="Home" />
-          </StyledMenuItem>
-        </NavLink>
-        <NavLink
+          <ListItemIcon>
+            <HomeIcon style={{ color: "#191970" }} fontSize="medium" />
+          </ListItemIcon>
+          <ListItemText>Home</ListItemText>
+        </ListItem>
+        <ListItem
+          button
+          component={NavLink}
           exact
           activeStyle={{
             fontWeight: "bold",
-            color: "#4682B4",
+            color: "white",
+            background: "#00BFFF",
           }}
           className="linkMenu"
           to="/List"
         >
-          <StyledMenuItem>
-            <ListItemIcon>
-              <AssignmentIcon style={{ color: "#2E8B57" }} fontSize="medium" />
-            </ListItemIcon>
-            <ListItemText primary="Boards" />
-          </StyledMenuItem>
-        </NavLink>
+          <ListItemIcon>
+            <AssignmentIcon style={{ color: "#2E8B57" }} fontSize="medium" />
+          </ListItemIcon>
+          <ListItemText>Work</ListItemText>
+        </ListItem>
+        <ListItem
+          button
+          component={NavLink}
+          exact
+          activeStyle={{
+            fontWeight: "bold",
+            color: "white",
+            background: "#00BFFF",
+          }}
+          className="linkMenu"
+          to="/Covid"
+        >
+          <ListItemIcon>
+            <WarningIcon style={{ color: "#DC143C" }} fontSize="medium" />
+          </ListItemIcon>
+          <ListItemText>Covid</ListItemText>
+        </ListItem>
       </List>
     </div>
   );
@@ -224,6 +230,11 @@ function ResponsiveDrawer(props) {
           </IconButton>
           <Typography className={classes.grow} variant="h6" noWrap></Typography>
 
+          <Toggle
+            themeMode={props.themeMode}
+            darkMode={props.darkMode}
+            lightMode={props.lightMode}
+          />
           <IconButton>{AuthNav()}</IconButton>
         </Toolbar>
       </AppBar>

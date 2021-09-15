@@ -66,7 +66,7 @@ export default function Profile() {
 
     Promise.all(promises)
       .then(() => {
-        history.push("/");
+        history.push("/workmanagerment");
       })
       .catch(() => {
         setError("Failed to update account");

@@ -8,7 +8,6 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontSize: 30,
     fontFamily: "Raleway",
-    marginLeft: "393px",
   },
 }));
 

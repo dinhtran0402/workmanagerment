@@ -2,6 +2,10 @@
     text-align: center;
 }
 
+.body {
+    background: black;
+}
+
 .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -81,19 +85,17 @@
     font-weight: bold;
 }
 
+.linkMenu:focus {
+    background-color: black;
+}
+
 .imageBackground {
     background-image: url("https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2019Q1/scheduling/time-management-how-to-create-a-schedule-header@2x.png");
     height: 689px;
-    width: 100%;
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.paddingText {
-    padding-top: 127px;
-    padding-left: 393px;
 }
 
 @media screen and (max-width: 1536px) and (min-width: 768px) {
@@ -102,6 +104,9 @@
     }
 }
 
-.dark {
-    background: black;
+@media screen and (max-width: 1536px) and (min-width: 1535px) {
+    .paddingText {
+        padding-top: 127px;
+        padding-left: 641px;
+    }
 }

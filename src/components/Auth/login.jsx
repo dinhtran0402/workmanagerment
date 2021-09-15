@@ -69,7 +69,7 @@ export default function SignIn() {
       await login(emailRef.current.value, passwordRef.current.value);
       await timeout(3000);
 
-      history.push("/");
+      history.push("/workmanagerment");
     } catch {
       setError(
         "Failed to sign in (Email does not exist or password is incorrect)"

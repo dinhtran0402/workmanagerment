@@ -198,9 +198,9 @@ const Index = () => {
                           {...provided.droppableProps}
                           ref={provided.innerRef}
                           style={{
-                            background: snapshot.isDraggingOver
-                              ? "lightblue"
-                              : "#fafafa",
+                            // background: snapshot.isDraggingOver
+                            //   ? "lightblue"
+                            //   : "#fafafa",
                             padding: 4,
                             width: 350,
                             minHeight: 200,
@@ -234,7 +234,7 @@ const Index = () => {
                                         {...provided.dragHandleProps}
                                         style={{
                                           borderLeft: "5px solid #7FFFD4",
-                                          width: 300,
+                                          width: 320,
                                           userSelect: "none",
                                           padding: 5,
                                           margin: "0 0 8px 0",
